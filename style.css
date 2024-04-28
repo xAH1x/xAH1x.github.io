@@ -1,46 +1,59 @@
 <style>
-* {
-padding: 0;
-margin: 0;
-font-family:sans-serif;
+*{
+    margin: 0;
+	padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
 }
-body
-{
-background-color: #00FF8C;
+nav { 
+	width: 20%;
+    height: 100vh;
+	background-color: #111;
+    float: left;
 }
-ul {
-list-style: none;
-background: #333;
-text-align: center;
+.title{
+    background: linear-gradient(#000, #222);
+	font-size: 14px;
+	display: block;
+	padding: 10px 15px;
+	cursor: pointer;
+    transition: all .25s;
+	color: #FFF;
 }
-ul li {
-display: inline-block;
-position: relative;
+ul li{
+	background-color: #111;
+	height: 35px;
+	overflow: hidden;
+	transition: all .3s;
+	font-weight: bold;	
 }
-ul li a {
-display: block;
-padding: 20px 25px;
-color: #FFF;
-text-decoration: none;
-text-align: center;
-font-size: 16px;
+a{
+	font-size: 12px;
+	text-decoration: none;
+	display: block;
+	padding: 10px 25px;
+	transition: all .25s;
+	color: #FFF;
 }
-ul li ul.dropdown li {
-display: block;
-background: #333;
-margin: 2px 0px;
+a:hover {
+	background-color: #333;
+    box-shadow: inset 5px 0px 0px 0px #f00;
 }
-ul li ul.dropdown {
-width:auto;
-background: #00FF8C;
-position: absolute;
-z-index: 999;
-display: none;
+.title:hover {
+	text-shadow: 0px 0px 10px #fff;
 }
-ul li a:hover {
-background: #222;
+input[type="radio"] {
+	display: none;
 }
-ul li:hover ul.dropdown{
-display: block;
+#dashboard:checked + li, #tasks:checked + li, #profile:checked + li {
+	height: 140px;
 }
-</style>
+i {
+	margin-right: 10px;
+}
+.main {
+    width: 80%;
+    padding: 10px;
+    float: right;
+}
+</style>           
