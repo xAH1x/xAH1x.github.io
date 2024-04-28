@@ -1,59 +1,40 @@
 <style>
-*{
+* {
+    padding: 0;
     margin: 0;
-	padding: 0;
     font-family: monospace;
-    box-sizing: border-box;
 }
-nav { 
-	width: 20%;
-    height: 100vh;
-	background-color: #111;
-    float: left;
+ul {
+    text-align: center;    
+    list-style: none;
+    background: #111827;
 }
-.title{
-    background: linear-gradient(#000, #222);
-	font-size: 14px;
-	display: block;
-	padding: 10px 15px;
-	cursor: pointer;
-    transition: all .25s;
-	color: #FFF;
+ul li {
+    display: inline-block;
+    position: relative;
 }
-ul li{
-	background-color: #111;
-	height: 35px;
-	overflow: hidden;
-	transition: all .3s;
-	font-weight: bold;	
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #E0E7FC;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
 }
-a{
-	font-size: 12px;
-	text-decoration: none;
-	display: block;
-	padding: 10px 25px;
-	transition: all .25s;
-	color: #FFF;
+ul.dropdown li {
+    display: block;
 }
-a:hover {
-	background-color: #333;
-    box-shadow: inset 5px 0px 0px 0px #f00;
+ul li a:hover {
+    background: #374151;
+    color:#E5E7EB;
 }
-.title:hover {
-	text-shadow: 0px 0px 10px #fff;
+ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
 }
-input[type="radio"] {
-	display: none;
+ul li:hover ul.dropdown {
+    display: block;
 }
-#dashboard:checked + li, #tasks:checked + li, #profile:checked + li {
-	height: 140px;
-}
-i {
-	margin-right: 10px;
-}
-.main {
-    width: 80%;
-    padding: 10px;
-    float: right;
-}
-</style>           
+</style>          
